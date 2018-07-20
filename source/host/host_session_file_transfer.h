@@ -19,6 +19,7 @@
 #ifndef ASPIA_HOST__HOST_SESSION_FILE_TRANSFER_H_
 #define ASPIA_HOST__HOST_SESSION_FILE_TRANSFER_H_
 
+#include "base/macros_magic.h"
 #include "host/host_session.h"
 
 namespace aspia {
@@ -45,7 +46,7 @@ protected:
 private:
     QPointer<FileWorker> worker_;
 
-    Q_DISABLE_COPY(HostSessionFileTransfer)
+    DISALLOW_COPY_AND_ASSIGN(HostSessionFileTransfer);
 };
 
 } // namespace aspia

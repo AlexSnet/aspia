@@ -22,6 +22,8 @@
 #define WIN32_LEAN_AND_MEAN
 #include <windows.h>
 
+#include "base/macros_magic.h"
+
 namespace aspia {
 
 // Like ScopedHandle but for GDI objects.
@@ -66,7 +68,7 @@ public:
 private:
     T object_ = nullptr;
 
-    Q_DISABLE_COPY(ScopedGDIObject)
+    DISALLOW_COPY_AND_ASSIGN(ScopedGDIObject);
 };
 
 // The traits class that uses DeleteObject() to close a handle.

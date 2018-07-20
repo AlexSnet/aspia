@@ -24,6 +24,7 @@
 
 #include "base/message_loop/message_pump_win.h"
 #include "base/message_loop/pending_task.h"
+#include "base/macros_magic.h"
 
 namespace aspia {
 
@@ -121,7 +122,7 @@ protected:
 private:
     void quit();
 
-    Q_DISABLE_COPY(MessageLoop)
+    DISALLOW_COPY_AND_ASSIGN(MessageLoop);
 };
 
 class MessageLoopForWin : public MessageLoop

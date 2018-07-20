@@ -87,7 +87,7 @@ private:
 
     MessageLoop* message_loop_ = nullptr;
 
-    Q_DISABLE_COPY(MessageLoopThread)
+    DISALLOW_COPY_AND_ASSIGN(MessageLoopThread);
 };
 
 } // namespace aspia

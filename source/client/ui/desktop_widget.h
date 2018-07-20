@@ -23,6 +23,7 @@
 #include <QWidget>
 #include <memory>
 
+#include "base/macros_magic.h"
 #include "desktop_capture/desktop_frame.h"
 
 namespace aspia {
@@ -71,7 +72,7 @@ private:
     QPoint prev_pos_;
     quint32 prev_mask_ = 0;
 
-    Q_DISABLE_COPY(DesktopWidget)
+    DISALLOW_COPY_AND_ASSIGN(DesktopWidget);
 };
 
 } // namespace aspia

@@ -21,6 +21,8 @@
 
 #include <chrono>
 
+#include "base/macros_magic.h"
+
 namespace aspia {
 
 class CaptureScheduler
@@ -35,7 +37,7 @@ public:
 private:
     std::chrono::time_point<std::chrono::high_resolution_clock> begin_time_;
 
-    Q_DISABLE_COPY(CaptureScheduler)
+    DISALLOW_COPY_AND_ASSIGN(CaptureScheduler);
 };
 
 } // namespace aspia

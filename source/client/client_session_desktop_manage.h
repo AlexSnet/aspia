@@ -54,7 +54,7 @@ private:
 
     std::unique_ptr<CursorDecoder> cursor_decoder_;
 
-    Q_DISABLE_COPY(ClientSessionDesktopManage)
+    DISALLOW_COPY_AND_ASSIGN(ClientSessionDesktopManage);
 };
 
 } // namespace aspia

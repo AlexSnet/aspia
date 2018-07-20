@@ -21,6 +21,7 @@
 
 #include <memory>
 
+#include "base/macros_magic.h"
 #include "desktop_capture/desktop_frame.h"
 
 namespace aspia {
@@ -39,7 +40,7 @@ private:
                       int stride,
                       quint8* data);
 
-    Q_DISABLE_COPY(DesktopFrameAligned)
+    DISALLOW_COPY_AND_ASSIGN(DesktopFrameAligned);
 };
 
 } // namespace aspia

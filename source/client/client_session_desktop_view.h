@@ -63,7 +63,7 @@ private:
     proto::desktop::VideoEncoding video_encoding_ = proto::desktop::VIDEO_ENCODING_UNKNOWN;
     std::unique_ptr<VideoDecoder> video_decoder_;
 
-    Q_DISABLE_COPY(ClientSessionDesktopView)
+    DISALLOW_COPY_AND_ASSIGN(ClientSessionDesktopView);
 };
 
 } // namespace aspia

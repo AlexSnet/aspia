@@ -101,7 +101,7 @@ private:
     QPoint prev_mouse_pos_;
     quint32 prev_mouse_button_mask_ = 0;
 
-    Q_DISABLE_COPY(InputInjectorImpl)
+    DISALLOW_COPY_AND_ASSIGN(InputInjectorImpl);
 };
 
 InputInjectorImpl::~InputInjectorImpl()

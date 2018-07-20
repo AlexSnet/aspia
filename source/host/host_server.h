@@ -91,7 +91,7 @@ private:
 
     int restart_timer_id_ = 0;
 
-    Q_DISABLE_COPY(HostServer)
+    DISALLOW_COPY_AND_ASSIGN(HostServer);
 };
 
 } // namespace aspia

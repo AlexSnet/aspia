@@ -22,6 +22,8 @@
 #include <QRegion>
 #include <memory>
 
+#include "base/macros_magic.h"
+
 namespace aspia {
 
 // Class to search for changed regions of the screen.
@@ -59,7 +61,7 @@ private:
     typedef quint8(*DiffFullBlockFunc)(const quint8*, const quint8*, int);
     DiffFullBlockFunc diff_full_block_func_;
 
-    Q_DISABLE_COPY(Differ)
+    DISALLOW_COPY_AND_ASSIGN(Differ);
 };
 
 } // namespace aspia

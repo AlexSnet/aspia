@@ -24,6 +24,8 @@
 #include <qt_windows.h>
 #include <memory>
 
+#include "base/macros_magic.h"
+
 namespace aspia {
 
 class ScopedGetDC;
@@ -40,7 +42,7 @@ private:
     std::unique_ptr<ScopedGetDC> desktop_dc_;
     CURSORINFO prev_cursor_info_;
 
-    Q_DISABLE_COPY(CursorCapturerWin)
+    DISALLOW_COPY_AND_ASSIGN(CursorCapturerWin);
 };
 
 } // namespace aspia

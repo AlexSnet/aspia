@@ -102,7 +102,7 @@ private:
 
     bool is_changed_ = false;
 
-    Q_DISABLE_COPY(AddressBookTab)
+    DISALLOW_COPY_AND_ASSIGN(AddressBookTab);
 };
 
 } // namespace aspia

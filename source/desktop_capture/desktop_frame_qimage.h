@@ -22,6 +22,7 @@
 #include <QImage>
 #include <memory>
 
+#include "base/macros_magic.h"
 #include "desktop_capture/desktop_frame.h"
 
 namespace aspia {
@@ -43,7 +44,7 @@ private:
 
     QImage image_;
 
-    Q_DISABLE_COPY(DesktopFrameQImage)
+    DISALLOW_COPY_AND_ASSIGN(DesktopFrameQImage);
 };
 
 } // namespace aspia

@@ -24,6 +24,8 @@
 
 #include <vector>
 
+#include "base/macros_magic.h"
+
 namespace aspia {
 
 class RegistryKey
@@ -92,7 +94,7 @@ private:
     HKEY key_ = nullptr;
     REGSAM wow64access_ = 0;
 
-    Q_DISABLE_COPY(RegistryKey)
+    DISALLOW_COPY_AND_ASSIGN(RegistryKey);
 };
 
 // Iterates the entries found in a particular folder on the registry.
@@ -147,7 +149,7 @@ private:
     DWORD value_size_;
     DWORD type_;
 
-    Q_DISABLE_COPY(RegistryValueIterator)
+    DISALLOW_COPY_AND_ASSIGN(RegistryValueIterator);
 };
 
 class RegistryKeyIterator
@@ -191,7 +193,7 @@ private:
 
     wchar_t name_[MAX_PATH];
 
-    Q_DISABLE_COPY(RegistryKeyIterator)
+    DISALLOW_COPY_AND_ASSIGN(RegistryKeyIterator);
 };
 
 } // namespace aspia

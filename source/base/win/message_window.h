@@ -24,6 +24,8 @@
 
 #include <functional>
 
+#include "base/macros_magic.h"
+
 namespace aspia {
 
 class MessageWindow
@@ -53,7 +55,7 @@ private:
     MessageCallback message_callback_;
     HWND hwnd_ = nullptr;
 
-    Q_DISABLE_COPY(MessageWindow)
+    DISALLOW_COPY_AND_ASSIGN(MessageWindow);
 };
 
 } // namespace aspia

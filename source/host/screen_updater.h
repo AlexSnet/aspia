@@ -26,6 +26,7 @@
 #include <memory>
 #include <mutex>
 
+#include "base/macros_magic.h"
 #include "protocol/desktop_session.pb.h"
 
 namespace aspia {
@@ -55,7 +56,7 @@ public:
         std::unique_ptr<aspia::proto::desktop::CursorShape> cursor_shape;
 
     private:
-        Q_DISABLE_COPY(UpdateEvent)
+        DISALLOW_COPY_AND_ASSIGN(UpdateEvent);
     };
 
     class ErrorEvent : public QEvent
@@ -70,7 +71,7 @@ public:
         }
 
     private:
-        Q_DISABLE_COPY(ErrorEvent)
+        DISALLOW_COPY_AND_ASSIGN(ErrorEvent);
     };
 
 protected:
@@ -85,7 +86,7 @@ private:
 
     proto::desktop::Config config_;
 
-    Q_DISABLE_COPY(ScreenUpdater)
+    DISALLOW_COPY_AND_ASSIGN(ScreenUpdater);
 };
 
 } // namespace aspia

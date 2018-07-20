@@ -23,6 +23,7 @@
 #include <mutex>
 
 #include "base/message_loop/message_pump.h"
+#include "base/macros_magic.h"
 
 namespace aspia {
 
@@ -51,7 +52,7 @@ private:
     // The time at which we should call DoDelayedWork.
     MessageLoopTimePoint delayed_work_time_;
 
-    Q_DISABLE_COPY(MessagePumpDefault)
+    DISALLOW_COPY_AND_ASSIGN(MessagePumpDefault);
 };
 
 } // namespace aspia

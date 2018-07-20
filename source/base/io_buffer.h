@@ -22,6 +22,8 @@
 #include <cstdint>
 #include <memory>
 
+#include "base/macros_magic.h"
+
 namespace aspia {
 
 class IOBuffer
@@ -41,7 +43,7 @@ private:
     std::unique_ptr<uint8_t[]> data_;
     const size_t size_;
 
-    Q_DISABLE_COPY(IOBuffer)
+    DISALLOW_COPY_AND_ASSIGN(IOBuffer);
 };
 
 } // namespace aspia

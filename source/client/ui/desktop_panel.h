@@ -21,6 +21,7 @@
 
 #include <QPointer>
 
+#include "base/macros_magic.h"
 #include "protocol/authorization.pb.h"
 #include "ui_desktop_panel.h"
 
@@ -66,7 +67,7 @@ private:
     bool allow_hide_ = true;
     bool leaved_ = true;
 
-    Q_DISABLE_COPY(DesktopPanel)
+    DISALLOW_COPY_AND_ASSIGN(DesktopPanel);
 };
 
 } // namespace aspia

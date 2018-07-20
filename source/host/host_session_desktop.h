@@ -19,6 +19,7 @@
 #ifndef ASPIA_HOST__HOST_SESSION_DESKTOP_H_
 #define ASPIA_HOST__HOST_SESSION_DESKTOP_H_
 
+#include "base/macros_magic.h"
 #include "host/host_session.h"
 #include "protocol/authorization.pb.h"
 #include "protocol/desktop_session.pb.h"
@@ -63,7 +64,7 @@ private:
     QPointer<Clipboard> clipboard_;
     QScopedPointer<InputInjector> input_injector_;
 
-    Q_DISABLE_COPY(HostSessionDesktop)
+    DISALLOW_COPY_AND_ASSIGN(HostSessionDesktop);
 };
 
 } // namespace aspia

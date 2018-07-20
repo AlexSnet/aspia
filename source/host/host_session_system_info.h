@@ -19,6 +19,7 @@
 #ifndef ASPIA_HOST__HOST_SESSION_SYSTEM_INFO_H_
 #define ASPIA_HOST__HOST_SESSION_SYSTEM_INFO_H_
 
+#include "base/macros_magic.h"
 #include "host/host_session.h"
 #include "protocol/system_info_session.pb.h"
 #include "system_info/category.h"
@@ -50,7 +51,7 @@ private:
 
     QList<Category> category_list_;
 
-    Q_DISABLE_COPY(HostSessionSystemInfo)
+    DISALLOW_COPY_AND_ASSIGN(HostSessionSystemInfo);
 };
 
 } // namespace aspia

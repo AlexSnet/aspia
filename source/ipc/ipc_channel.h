@@ -26,6 +26,8 @@
 #include <queue>
 #include <utility>
 
+#include "base/macros_magic.h"
+
 namespace aspia {
 
 class IpcServer;
@@ -93,7 +95,7 @@ private:
     MessageSizeType read_size_ = 0;
     qint64 read_ = 0;
 
-    Q_DISABLE_COPY(IpcChannel)
+    DISALLOW_COPY_AND_ASSIGN(IpcChannel);
 };
 
 } // namespace aspia

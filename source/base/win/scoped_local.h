@@ -22,6 +22,8 @@
 #define WIN32_LEAN_AND_MEAN
 #include <windows.h>
 
+#include "base/macros_magic.h"
+
 namespace aspia {
 
 template <typename T>
@@ -96,7 +98,7 @@ private:
 
     T local_ = nullptr;
 
-    Q_DISABLE_COPY(ScopedLocal)
+    DISALLOW_COPY_AND_ASSIGN(ScopedLocal);
 };
 
 } // namespace aspia

@@ -22,6 +22,7 @@
 #include <QEventLoop>
 
 #include "base/message_loop/message_pump.h"
+#include "base/macros_magic.h"
 
 namespace aspia {
 
@@ -61,7 +62,7 @@ private:
 
     private:
         MessagePumpForQt* pump_;
-        Q_DISABLE_COPY(EventLoop)
+        DISALLOW_COPY_AND_ASSIGN(EventLoop);
     };
 
     RunState* state_ = nullptr;
@@ -72,7 +73,7 @@ private:
     EventLoop* event_loop_ = nullptr;
     int event_loop_timer_ = 0;
 
-    Q_DISABLE_COPY(MessagePumpForQt)
+    DISALLOW_COPY_AND_ASSIGN(MessagePumpForQt);
 };
 
 } // namespace aspia

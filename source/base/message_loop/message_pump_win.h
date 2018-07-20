@@ -83,7 +83,7 @@ private:
     // State for the current invocation of Run.
     RunState* state_ = nullptr;
 
-    Q_DISABLE_COPY(MessagePumpForWin)
+    DISALLOW_COPY_AND_ASSIGN(MessagePumpForWin);
 };
 
 } // namespace aspia

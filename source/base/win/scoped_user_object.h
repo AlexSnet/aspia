@@ -22,6 +22,8 @@
 #define WIN32_LEAN_AND_MEAN
 #include <windows.h>
 
+#include "base/macros_magic.h"
+
 namespace aspia {
 
 // Like ScopedGDIObject but for User objects.
@@ -76,7 +78,7 @@ public:
 private:
     T object_ = nullptr;
 
-    Q_DISABLE_COPY(ScopedUserObject)
+    DISALLOW_COPY_AND_ASSIGN(ScopedUserObject);
 };
 
 // The traits class that uses DestroyWindow() to close a handle.

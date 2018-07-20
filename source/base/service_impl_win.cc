@@ -78,7 +78,7 @@ private:
     SERVICE_STATUS_HANDLE status_handle_ = nullptr;
     SERVICE_STATUS status_;
 
-    Q_DISABLE_COPY(ServiceHandler)
+    DISALLOW_COPY_AND_ASSIGN(ServiceHandler);
 };
 
 class ServiceEventHandler : public QObject
@@ -115,7 +115,7 @@ public:
         quint32 event_;
         quint32 session_id_;
 
-        Q_DISABLE_COPY(SessionChangeEvent)
+        DISALLOW_COPY_AND_ASSIGN(SessionChangeEvent);
     };
 
 protected:
@@ -123,7 +123,7 @@ protected:
     void customEvent(QEvent* event) override;
 
 private:
-    Q_DISABLE_COPY(ServiceEventHandler)
+    DISALLOW_COPY_AND_ASSIGN(ServiceEventHandler);
 };
 
 //================================================================================================

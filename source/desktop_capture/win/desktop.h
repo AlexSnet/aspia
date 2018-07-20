@@ -22,6 +22,8 @@
 #define WIN32_LEAN_AND_MEAN
 #include <windows.h>
 
+#include "base/macros_magic.h"
+
 namespace aspia {
 
 class Desktop
@@ -83,7 +85,7 @@ private:
     // True if |desktop_| must be closed on teardown.
     bool own_ = false;
 
-    Q_DISABLE_COPY(Desktop)
+    DISALLOW_COPY_AND_ASSIGN(Desktop);
 };
 
 } // namespace aspia

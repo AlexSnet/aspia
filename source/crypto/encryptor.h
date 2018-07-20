@@ -23,6 +23,8 @@
 
 #include <vector>
 
+#include "base/macros_magic.h"
+
 namespace aspia {
 
 // Implements encryption of messages with using xsalsa20 + poly1305 algorithms.
@@ -56,7 +58,7 @@ private:
     std::vector<quint8> encrypt_nonce_;
     std::vector<quint8> decrypt_nonce_;
 
-    Q_DISABLE_COPY(Encryptor)
+    DISALLOW_COPY_AND_ASSIGN(Encryptor);
 };
 
 } // namespace aspia
