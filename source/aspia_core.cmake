@@ -34,6 +34,7 @@ list(APPEND SOURCE_BASE
     ${PROJECT_SOURCE_DIR}/base/errno_logging.h
     ${PROJECT_SOURCE_DIR}/base/file_logger.cc
     ${PROJECT_SOURCE_DIR}/base/file_logger.h
+    ${PROJECT_SOURCE_DIR}/base/io_buffer.h
     ${PROJECT_SOURCE_DIR}/base/keycode_converter.cc
     ${PROJECT_SOURCE_DIR}/base/keycode_converter.h
     ${PROJECT_SOURCE_DIR}/base/locale_loader.cc
